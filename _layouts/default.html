@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Personal site of Ben Morris.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}} | Ben Morris</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="bengm">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.deep_orange-blue.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      div.mdl-layout__drawer {
+        background-color: rgb(255, 87, 34);
+        color:#fff;
+      }
+      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+        color:#fff;
+      }
+      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+        background-color: rgb(33, 150, 243);
+      }
+      .meta {
+        font-style: italic;
+        color:#999;
+        margin-bottom:0px;
+      }
+      .sidebar-content {
+        color:#fff;
+        padding-left: 40px;
+        text-decoration: none;
+      }
+      .mdl-card__title-text a {
+        color: rgb(33, 150, 243);
+        background:rgba(255,255,255,.9);
+        text-decoration: none;
+      }
+      .chip {
+        background-clip: border-box;
+        background-color: rgb(224, 224, 224);
+        background-image: none;
+        background-origin: padding-box;
+        background-size: auto;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        color: rgb(66, 66, 66);
+        float: right;
+        font-size: 13px;
+        height: 32px;
+        line-height: 32px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 8px;
+        margin-top: 8px;
+        padding-bottom: 0px;
+        padding-left: 12px;
+        padding-right: 8px;
+        padding-top: 0px;
+      }
+    </style>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                    mdl-layout--overlay-drawer-button">
+          {% include nav.html %}
+          <main class="mdl-layout__content">
+            <div class="page-content" style="padding:3em;">
+                {% for ptag in page.tags %}
+                  <span class="chip">{{ ptag }}</span>
+                {% endfor %}
+              <h1>{{ page.title }}</h1>
+              <p class="meta">
+                {{ page.meta }}
+              </p>
+              {{content}} 
+            </div>
+          </main>
+      </div>
+
+    <!-- IE Compatibility shims -->
+      <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js""></script>
+      <![endif]-->
+
+      <!--[if IE]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js"></script>
+        <link href="../assets/ie.css" rel="stylesheet">
+      <![endif]-->
+    <!-- end shims -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+
+  </body>
+</html>

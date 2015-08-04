@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Home
+title: Tech Posts
 ---
 
 <div class="mdl-grid">
-  {% for post in site.posts %}
+  {% for post in site.tags.tech %}
     {% include postcard.html %}
   {% endfor %}
 </div>

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Home
+title: Kids Posts
 ---
 
 <div class="mdl-grid">
-  {% for post in site.posts %}
+  {% for post in site.tags.kids %}
     {% include postcard.html %}
   {% endfor %}
 </div>
