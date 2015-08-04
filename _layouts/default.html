@@ -26,6 +26,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <style type="text/css">
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
       div.mdl-layout__drawer {
         background-color: rgb(255, 87, 34);
         color:#fff;
@@ -39,7 +43,6 @@
       .meta {
         font-style: italic;
         color:#999;
-        margin-bottom:0px;
       }
       .sidebar-content {
         color:#fff;
@@ -48,7 +51,7 @@
       }
       .mdl-card__title-text a {
         color: rgb(33, 150, 243);
-        background:rgba(255,255,255,.9);
+        background:rgba(255,255,255,.8);
         text-decoration: none;
       }
       .chip {
@@ -89,7 +92,9 @@
                 {% endfor %}
               <h1>{{ page.title }}</h1>
               <p class="meta">
-                {{ page.meta }}
+                {% if page.date != null %}
+                {{ page.date | date_to_long_string }}
+                {% endif %}
               </p>
               {{content}} 
             </div>
