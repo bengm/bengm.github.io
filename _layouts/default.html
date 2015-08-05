@@ -20,74 +20,22 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <!-- styles -->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.deep_orange-blue.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-      }
-      div.mdl-layout__drawer {
-        background-color: rgb(255, 87, 34);
-        color:#fff;
-      }
-      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-        color:#fff;
-      }
-      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-        background-color: rgb(33, 150, 243);
-      }
-      .mdl-layout-title {
-        font-family: 'Vollkorn', serif;
-      }
-      .meta {
-        font-style: italic;
-        color:#999;
-      }
-      .sidebar-content {
-        color:#fff;
-        padding-left: 40px;
-        text-decoration: none;
-      }
-      .mdl-card__title-text a {
-        color: rgb(33, 150, 243);
-        background:rgba(255,255,255,.8);
-        text-decoration: none;
-      }
-      .chip {
-        background-clip: border-box;
-        background-color: rgb(224, 224, 224);
-        background-image: none;
-        background-origin: padding-box;
-        background-size: auto;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        color: rgb(66, 66, 66);
-        float: right;
-        font-size: 13px;
-        height: 32px;
-        line-height: 32px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 8px;
-        margin-top: 8px;
-        padding-bottom: 0px;
-        padding-left: 12px;
-        padding-right: 8px;
-        padding-top: 0px;
-      }
-    </style>
+    <link href="/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/custom.css">
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-                    mdl-layout--overlay-drawer-button">
+      <!-- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                    mdl-layout--overlay-drawer-button"> -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
           {% include nav.html %}
           <main class="mdl-layout__content">
             <div class="page-content" style="padding:3em;">
@@ -97,8 +45,9 @@
               <h1>{{ page.title }}</h1>
               <p class="meta">
                 {% if page.date != null %}
-                {{ page.date | date_to_long_string }}
+                  {{ page.date | date_to_long_string }}
                 {% endif %}
+                {{ page.description }}
               </p>
               {{content}} 
             </div>
