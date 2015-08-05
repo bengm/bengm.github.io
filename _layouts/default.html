@@ -43,22 +43,24 @@
     <link rel="stylesheet" href="/css/custom.css">
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-
-      <!-- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-                    mdl-layout--overlay-drawer-button"> -->
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
           {% include nav.html %}
+          <div class="printheader">
+            <strong>Ben Morris</strong> <small>| bengm.us | @bengm | printed {{ site.time | date: '%B %d, %Y' }}</small>
+          </div>
           <main class="mdl-layout__content">
             <div class="page-content" style="padding:3em;">
-                {% for ptag in page.tags %}
-                  <span class="chip">{{ ptag }}</span>
-                {% endfor %}
               <h1>{{ page.title }}</h1>
+
               <p class="meta">
                 {% if page.date != null %}
                   {{ page.date | date_to_long_string }}
                 {% endif %}
                 {{ page.description }}
+                &nbsp;&nbsp;
+                {% for ptag in page.tags %}
+                  <span class="chip">{{ ptag }}</span>
+                {% endfor %}
               </p>
               {{content}} 
             </div>

@@ -10,9 +10,12 @@
       {{ post.excerpt }}
     </div>
     <div class="mdl-card__supporting-text">
-      {% for ptag in post.tags %}
-        <span class="chip">{{ ptag }}</span>
-      {% endfor %}
-      <p class="meta">{{ post.date | date_to_string }}</p>
+      <p class="meta">
+        {{ post.date | date_to_string }}
+        &nbsp;&nbsp;
+        {% for ptag in post.tags %}
+          <span class="chip">{{ ptag }}</span>
+        {% endfor %}
+      </p>
     </div>
 </div>
