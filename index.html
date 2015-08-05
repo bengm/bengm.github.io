@@ -4,8 +4,22 @@ title: Home
 description: personal blog of Ben Morris - father, software maker, occasional traveller
 ---
 
+<!-- <div style="
+  font-family: 'PT Serif', serif; 
+  font-size:250px; 
+  color: #fff;
+  background-color: rgb(255, 87, 34);
+  padding: 20px;
+  line-height: 250px;
+  height: 250px;
+  width: 250px;
+">
+  B
+</div> -->
+
 <div class="mdl-grid">
   {% for post in site.posts %}
     {% include postcard.html %}
   {% endfor %}
 </div>
+

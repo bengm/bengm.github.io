@@ -20,8 +20,13 @@ div.mdl-layout__drawer {
   color:#fff;
   font-family: 'Roboto', sans-serif;
 }
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link,
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
   color:#fff;
+  font-size: 2em;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
   background-color: rgb(33, 150, 243);
