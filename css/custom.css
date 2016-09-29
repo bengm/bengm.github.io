@@ -11,6 +11,9 @@ h1, h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+img {
+  max-width: 90%;  
+}
 
 /* ================
    SIDE NAV 
