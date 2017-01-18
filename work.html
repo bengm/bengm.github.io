@@ -1,0 +1,11 @@
+---
+layout: default
+title: Work Posts
+description: work and productivity
+---
+
+<div class="mdl-grid">
+  {% for post in site.tags.work %}
+    {% include postcard.html %}
+  {% endfor %}
+</div>

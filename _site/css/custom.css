@@ -11,6 +11,12 @@ h1, h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+img {
+  max-width: 100%;  
+}
+div.page-content {
+  padding:1.5em;
+}
 
 /* ================
    SIDE NAV 
